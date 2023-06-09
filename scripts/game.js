@@ -30,3 +30,10 @@ function playRound(playerSelection, computerSelection) {
         return 'Unknown conditions!';
     }
 }
+
+function game() {
+    for (let i = 0; i < 5; i++) {
+        let playerSelection = prompt('rock, paper, scissors?');
+        console.log(playRound(playerSelection, getComputerChoice()));
+    }
+}
