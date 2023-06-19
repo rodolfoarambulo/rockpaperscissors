@@ -31,11 +31,13 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+const result = document.querySelector('#result');
+
 const btnRock = document.querySelector('#btnRock');
 btnRock.addEventListener(
     'click',
     () => {
-        console.log(playRound('rock', getComputerChoice()));
+        result.textContent = playRound('rock', getComputerChoice());
     },
     false
 );
@@ -44,7 +46,7 @@ const btnPaper = document.querySelector('#btnPaper');
 btnPaper.addEventListener(
     'click',
     () => {
-        console.log(playRound('paper', getComputerChoice()));
+        result.textContent = playRound('paper', getComputerChoice());
     },
     false
 );
@@ -53,7 +55,7 @@ const btnScissors = document.querySelector('#btnScissors');
 btnScissors.addEventListener(
     'click',
     () => {
-        console.log(playRound('scissors', getComputerChoice()));
+        result.textContent = playRound('scissors', getComputerChoice());
     },
     false
 );
